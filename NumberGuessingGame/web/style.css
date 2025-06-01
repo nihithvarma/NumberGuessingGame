@@ -1,0 +1,111 @@
+/* ===== Background & Layout ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #2a2a2a, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* ===== Container ===== */
+  .container {
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    width: 320px;
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* ===== Text ===== */
+  h1 {
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .subtitle {
+    color: #a0a0a0;
+    margin-bottom: 20px;
+  }
+  
+  /* ===== Input ===== */
+  input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 5px rgba(255,255,255,0.2);
+  }
+  
+  /* ===== Buttons ===== */
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+    box-shadow: 0 0 10px #888;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* ===== Feedback ===== */
+  #feedback {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-weight: bold;
+    margin-top: 20px;
+    min-height: 1.5em;
+    color: #00ffd0;
+  }
+  
+  #feedback.show {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  /* ===== Attempts ===== */
+  #attempts {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #aaa;
+  }
+  
